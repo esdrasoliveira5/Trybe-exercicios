@@ -1,0 +1,5 @@
+  189  cat > animais.txt
+  190  ls
+  191  cat nomes.txt animais.txt | sort
+  192  sort nomes.txt animais.txt > nomes_animais.txt
+  193  cat nomes_animais.txt

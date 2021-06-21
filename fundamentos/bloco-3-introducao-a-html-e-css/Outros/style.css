@@ -1,0 +1,23 @@
+.mamaco {
+    color: brown;
+}
+.paragrafo {
+    width: 80%;
+    height: 300px;
+    overflow: auto;
+    position: absolute;
+    z-index: 4;
+}
+#albert {
+    width: 450px;
+    top: 20px;
+    position: absolute;
+}
+#gostosa {
+    float: right;
+    z-index: 3;
+}
+#oculos {
+    width: 450px;
+    position: absolute;
+}
