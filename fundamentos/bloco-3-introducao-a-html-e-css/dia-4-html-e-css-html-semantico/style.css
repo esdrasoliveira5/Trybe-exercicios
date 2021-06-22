@@ -1,21 +1,31 @@
+body {
+    padding: 40px;
+}
 header {
     background-color: aquamarine;
+    text-align: center;
 }
 nav ul li {
     display: inline-block;
     background-color: red;
+    margin: 20px;
 }
 article {
     background-color: bisque;
     display: inline-block;
+    text-align: justify;
 }
 table, td {
     background-color: blue;
     float: right;
     border: 1px solid black;
+    margin: 10px;
 }
 
 thead,tfoot {
     background-color: red;
     color:white;
+}
+article section img {
+    width: 400px;
 }
