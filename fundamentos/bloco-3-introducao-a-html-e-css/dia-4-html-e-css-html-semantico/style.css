@@ -9,7 +9,13 @@ article {
     background-color: bisque;
     display: inline-block;
 }
-aside {
+table, td {
     background-color: blue;
     float: right;
+    border: 1px solid black;
+}
+
+thead,tfoot {
+    background-color: red;
+    color:white;
 }
