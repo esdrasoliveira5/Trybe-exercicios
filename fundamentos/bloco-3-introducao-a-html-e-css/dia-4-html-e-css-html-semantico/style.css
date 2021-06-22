@@ -1,0 +1,15 @@
+header {
+    background-color: aquamarine;
+}
+nav ul li {
+    display: inline-block;
+    background-color: red;
+}
+article {
+    background-color: bisque;
+    display: inline-block;
+}
+aside {
+    background-color: blue;
+    float: right;
+}
