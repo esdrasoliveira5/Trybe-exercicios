@@ -1,0 +1,54 @@
+body {
+    padding: 40px;
+}
+header {
+    background-color: aquamarine;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+    background-color: red;
+    margin: 20px;
+}
+nav {
+    background-color: red;
+}
+article {
+    background-color: bisque;
+    display: inline-block;
+    text-align: left;
+}
+h2 {
+    text-align: center;
+}
+table, td {
+    background-color: blue;
+    float: right;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+thead th {
+    background-color: red;
+    color:white;
+    text-align: center;
+    border: 1px solid black;
+}
+
+article section img {
+    width: 400px;
+}
+aside {
+float: right;
+margin: 10px;
+border: 1px solid red;
+font-size: 20px;
+width: 150px;
+background-color: aquamarine;
+}
+footer {
+    background-color: blueviolet;
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+}
