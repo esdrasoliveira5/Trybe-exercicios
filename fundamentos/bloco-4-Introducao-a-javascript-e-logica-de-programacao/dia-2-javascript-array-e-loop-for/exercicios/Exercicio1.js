@@ -36,26 +36,52 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //}
 
 //Exercicio 5
-for (let index = 0; index <numbers.length; index +=1) {
-    
-
+//let maior = 0;
+//let menor = [];
+//for (let index = 0; index <numbers.length; index +=1) {
+//    if (numbers[index] >= maior) {
+//        maior = numbers[index];
+//    } else {
+//        menor.push(numbers[index]);
+//    }
+//}
+//console.log(maior);
 
 //Exercicio 6
-let impar= [];
-let par = [];
-for (let index = 0; index <numbers.length; index +=1) {
-    if (numbers[index] % 2 != 0) {
-        impar.push(numbers[index]);
-    } else {
-        par.push(numbers[index]);
-    }
+//let impar= [];
+//let par = [];
+//for (let index = 0; index <numbers.length; index +=1) {
+//    if (numbers[index] % 2 != 0) {
+//        impar.push(numbers[index]);
+//    } else {
+//        par.push(numbers[index]);
+//    }
+//}
+//if (impar.length > 0){
+//    console.log(impar.length);
+//} else {
+//    console.log("Nenhum valor impar encontrado");
+//}
+
+//Exercicio 7
+//let maior = [];
+//let menor = ;
+//for (let index = 0; index <numbers.length; index +=1) {
+//    if (numbers[index] < menor) {
+//        menor = numbers[index];
+//    } else {
+//        maior.push(numbers[index]);
+//    }
+//}
+//console.log(menor);
+
+//Exercicio 8
+let a = [1];
+for (index = 0; a.length <= 24; index += 1) {
+    a.push(1 + a[index]);
 }
-if (impar.length > 0){
-    console.log(impar.length);
-} else {
-    console.log("Nenhum valor impar encontrado");
-}
+console.log(a);
 
 
 
-
+ 
