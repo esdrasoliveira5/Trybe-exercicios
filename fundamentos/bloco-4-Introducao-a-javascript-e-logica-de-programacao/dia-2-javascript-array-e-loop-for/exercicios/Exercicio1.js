@@ -32,29 +32,23 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //if (mediaA > 20){
 //    console.log("Valor maior que 20");
 //} else {
-//    console.log("Valor menor");
+//    console.log("Valor menor que 20");
 //}
 
 //Exercicio 5
 //let maior = 0;
-//let menor = [];
-//for (let index = 0; index <numbers.length; index +=1) {
+//for (let index = 1; index <numbers.length; index +=1) {
 //    if (numbers[index] >= maior) {
 //        maior = numbers[index];
-//    } else {
-//        menor.push(numbers[index]);
-//    }
+//    } 
 //}
 //console.log(maior);
 
 //Exercicio 6
 //let impar= [];
-//let par = [];
 //for (let index = 0; index <numbers.length; index +=1) {
 //    if (numbers[index] % 2 != 0) {
 //        impar.push(numbers[index]);
-//    } else {
-//        par.push(numbers[index]);
 //    }
 //}
 //if (impar.length > 0){
@@ -65,23 +59,30 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //Exercicio 7
 //let maior = [];
-//let menor = ;
-//for (let index = 0; index <numbers.length; index +=1) {
+//let menor = numbers[0];
+
+//for (let index = 1; index <numbers.length; index +=1) {
 //    if (numbers[index] < menor) {
 //        menor = numbers[index];
-//    } else {
-//        maior.push(numbers[index]);
 //    }
-//}
+//}  
 //console.log(menor);
 
 //Exercicio 8
-let a = [1];
-for (index = 0; a.length <= 24; index += 1) {
-    a.push(1 + a[index]);
-}
-console.log(a);
-
-
+//let a = [];
+//for (let index = 1; index <= 25; index += 1) {
+//    a.push(index);
+//}
+//console.log(a);
+ 
+//Exercicio 9;
+//let a = [];
+//for (let index = 1; index <= 25; index += 1) {
+//    a.push(index);
+//}
+//console.log(a);
+//for (index1 = 0; index1 < a.length; index1 += 1) {
+//    console.log(a[index1] / 2);
+//}
 
  
