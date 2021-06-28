@@ -1,6 +1,6 @@
 let valorCusto = 7;
 let valorVenda = 22;
-let porcentagemImposto = 20 / 100;
+let porcentagemImposto = 0.20;
 let vendas = 1000;
 
 if (valorCusto == 0 || valorVenda == 0){
