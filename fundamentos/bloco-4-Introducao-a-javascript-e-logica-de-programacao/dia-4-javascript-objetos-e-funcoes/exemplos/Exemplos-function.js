@@ -138,7 +138,8 @@ function numeroPar (a, b, c,) {
         return "false";
     }
 }
-numeroPar(12, 14, 25);
+let temPar = numeroPar(12, 14, 25);
+console.log(temPar);
 
 //Exercicio 9 
 
@@ -149,7 +150,8 @@ function numeroImpar (a, b, c,) {
         return "false";
     }
 }
-numeroImpar (5, 6, 9);
+let temImpar = numeroImpar (5, 6, 9);
+console.log(temImpar);
 
 //Exercicio 10
 
@@ -164,11 +166,13 @@ function lucroSobrevalor (valorCusto, valorVenda, vendas) {
        return lucro * vendas;
     }
 }
-lucroSobrevalor(10, 20, 1000);
+let lucros = lucroSobrevalor(10, 20, 1000);
+console.log(lucros);
+
 
 //Exercicio 11 
 
-function calcularIr () {
+function calcularIr (salarioBruto) {
     if ( salarioBruto >= 5189.82 ){
         valorInss = 570.88;
     } else if (salarioBruto >= 2594.93 && salarioBruto < 5189.82) {
@@ -199,6 +203,8 @@ function calcularIr () {
    let salarioLiquido = salario - ir; 
    return salarioLiquido;
 }
-calcularIr(8000);
+
+let Salario = calcularIr(8000);
+console.log(salario);
 
 
