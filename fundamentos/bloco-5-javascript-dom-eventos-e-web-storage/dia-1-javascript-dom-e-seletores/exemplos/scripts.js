@@ -7,6 +7,6 @@ document.getElementsByClassName("p")[0].style.backgroundColor = "blue";
 
 document.getElementsByTagName("h4")[0].style.color = "red"
 
-
-
+document.querySelector("#page-title").style.backgroundColor = "grey"
+document.querySelectorAll(".header #second-paragraph")[0].style.backgroundColor = "yellow"
 
