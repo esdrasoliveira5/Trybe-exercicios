@@ -64,11 +64,14 @@
        document.getElementsByClassName("title")[0].innerText = "Exercício 5.1 - JavaScript";
        
        let upperCase = document.getElementsByTagName("p");
-       for (i = 0; i < upperCase.length; i += 1) {
+       for (let i = 0; i < upperCase.length; i += 1) {
            upperCase[i].style.textTransform = "uppercase";
        };
-       
 
+       let impress = document.getElementsByTagName("p");
+       for (let i = 0; i < impress.length; i += 1) {
+           console.log(impress[i]);
+       };
 
     </script>
   </body>
