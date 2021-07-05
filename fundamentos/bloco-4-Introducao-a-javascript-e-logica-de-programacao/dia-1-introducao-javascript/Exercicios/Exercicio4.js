@@ -1,9 +1,11 @@
-let valor = -0.55;
-
-if (valor > 0) {
-    console.log("Positive");
-} else if (valor < 0) {
-    console.log("Negative");
-} else {
-    console.log("Zero");
+function positiveNegative(value) {
+    if (value > 0) {
+        return "positive";
+    } else if (value === 0) {
+        return "zero";
+    } else {
+        return "negative";
+    }
 }
+console.log(positiveNegative(-2));
+

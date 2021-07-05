@@ -1,8 +1,10 @@
-let a = 10;
-let b = 25;
 
-if (a > b){
-    console.log(a);
-} else {
-    console.log (b);
+function highernumber(valueA, valueB) {
+    if (valueA > valueB) {
+        return valueA;
+    } else {
+        return valueB;
+    }
 }
+
+console.log(highernumber(25, 55));

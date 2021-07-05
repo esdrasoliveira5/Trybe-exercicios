@@ -1,11 +1,11 @@
-let a = 15;
-let b = 19;
-let c = 4;
 
-if (a > b && a > c) {
-    console.log(a);
-} else if (b > a && b > c) {
-    console.log(b);
-} else {
-    console.log(c);
+function highernumber(valueA, valueB, valueC) {
+    if (valueA > valueB && valueA > valueC) {
+        return valueA;
+    } else if (valueB > valueA && valueB > valueC) {
+        return valueB;
+    } else {
+        return valueC;
+    }
 }
+console.log(highernumber(100, 5, 587));
