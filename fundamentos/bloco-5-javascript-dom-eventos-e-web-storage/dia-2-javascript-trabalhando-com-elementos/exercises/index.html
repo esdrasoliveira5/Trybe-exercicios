@@ -91,6 +91,19 @@
       image.src = "https://picsum.photos/200";
       image.className = "small-image";
 
+      let ul = document.createElement("ul");
+      let right = document.querySelector(".right-content");
+      right.appendChild(ul);
+
+      let value = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+      let lista = document.querySelector("ul");
+      for (let i = 0; i < value.length; i += 1) {
+        let numeros = value[i];
+
+        let li = document.createElement('li');
+        li.innerText = numeros;
+        lista.appendChild(li);
+      };
       
 
     </script>
