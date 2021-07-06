@@ -104,6 +104,7 @@
         let li = document.createElement('li');
         li.innerText = numeros;
         lista.appendChild(li);
+        li.className = "itens";
       };
 
       for (i2 =0; i2 <= 3; i2 += 1) {
@@ -114,8 +115,18 @@
       
       main.removeChild(left);
       right.style.marginRight = "auto";
-      center.parentElement.style.backgroundColor = "blue";
-      
+      center.parentElement.style.backgroundColor = "green";
+
+      let listaDeItens = document.querySelectorAll(".itens");
+      for (let i = 0; i < listaDeItens.length; i += 1) {
+        let element = listaDeItens[i];
+
+        if (element.innerText.includes("nove") || element.innerText.includes("dez")) {
+          lista.removeChild(element);
+        };
+
+      }
+
       
     </script>
   </body>
