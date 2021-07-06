@@ -19,6 +19,13 @@ a cor do mesmo;
 Segue abaixo um exemplo do uso de event.target:
 */
 
+myWebpage.addEventListener("click", openWebPage);
+
+function openWebPage() {
+    window.open("https://esdrasoliveira5.github.io/", "_blank");
+};
+
+
 firstDiv.addEventListener("click", firstreceberClick);
 
 function firstreceberClick() {
@@ -56,14 +63,7 @@ function thirdReceberClick() {
         secondDiv.classList.remove("tech");
         thirdDiv.className = "tech";
     };
-}
-
-let tech = document.querySelector(".tech");
-input.addEventListener()("keyup", substituirTech);
-
-function substituirTech () {
-    tech.innerText = input.innerText;
-}
+};
 
 
 
