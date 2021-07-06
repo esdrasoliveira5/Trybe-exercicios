@@ -19,6 +19,54 @@ a cor do mesmo;
 Segue abaixo um exemplo do uso de event.target:
 */
 
+firstDiv.addEventListener("click", firstreceberClick);
+
+function firstreceberClick() {
+    if (firstDiv.classList == "tech") {
+        firstDiv.classList.remove("tech");
+    } else {
+        thirdDiv.classList.remove("tech");
+        secondDiv.classList.remove("tech");
+        firstDiv.className = "tech";
+    };
+    
+
+};
+
+secondDiv.addEventListener("click", secondReceberClick);
+
+function secondReceberClick() {
+    if (secondDiv.classList == "tech") {
+        secondDiv.classList.remove("tech");
+    } else {
+        thirdDiv.classList.remove("tech");
+        firstDiv.classList.remove("tech");
+        secondDiv.className = "tech";
+    };
+
+};
+
+thirdDiv.addEventListener("click", thirdReceberClick);
+
+function thirdReceberClick() {
+    if (thirdDiv.classList == "tech") {
+        thirdDiv.classList.remove("tech");
+    } else {
+        firstDiv.classList.remove("tech");
+        secondDiv.classList.remove("tech");
+        thirdDiv.className = "tech";
+    };
+}
+
+let tech = document.querySelector(".tech");
+input.addEventListener()("keyup", substituirTech);
+
+function substituirTech () {
+    tech.innerText = input.innerText;
+}
+
+
+
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
   event.target.innerText = 'Opção reiniciada';
