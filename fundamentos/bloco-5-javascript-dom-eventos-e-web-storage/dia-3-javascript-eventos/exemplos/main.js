@@ -19,11 +19,21 @@ a cor do mesmo;
 Segue abaixo um exemplo do uso de event.target:
 */
 
-myWebpage.addEventListener("click", openWebPage);
+myWebpage.addEventListener("dblclick", openWebPage);
 
 function openWebPage() {
     window.open("https://esdrasoliveira5.github.io/", "_blank");
 };
+
+myWebpage.addEventListener("mouseover", colorChange);
+
+function colorChange () {
+    if (myWebpage.style.color == "green") {
+        myWebpage.style.color = "white";
+    } else {
+        myWebpage.style.color = "green";
+    };
+}
 
 
 firstDiv.addEventListener("click", firstreceberClick);
@@ -65,6 +75,10 @@ function thirdReceberClick() {
     };
 };
 
+input.addEventListener("keyup", changeTech);
+function changeTech() {
+    document.querySelector(".tech").innerText = input.value;
+};
 
 
 function resetText(event) {
