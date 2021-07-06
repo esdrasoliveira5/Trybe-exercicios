@@ -27,53 +27,71 @@ function openWebPage() {
 
 myWebpage.addEventListener("mouseover", colorChange);
 
-function colorChange () {
-    if (myWebpage.style.color == "green") {
+
+//Usando o EVENT.Target
+// function colorChange (event) {
+//     event.target.style.color = "green";
+//  }
+
+ function colorChange () {
+          if (myWebpage.style.color == "green") {
         myWebpage.style.color = "white";
     } else {
         myWebpage.style.color = "green";
     };
-}
+};
 
+// firstDiv.addEventListener("click", receberClick);
+// secondDiv.addEventListener("click", receberClick);
+// thirdDiv.addEventListener("click", receberClick);
 
-firstDiv.addEventListener("click", firstreceberClick);
+//Usando o Target
+// function receberClick (event) {
+//     if (event.target.classList == "tech") {
+//         event.target.classList.remove("tech");
+//     } else {
+//         event.target.classList.add("tech");
+//     };
+// };
 
-function firstreceberClick() {
-    if (firstDiv.classList == "tech") {
-        firstDiv.classList.remove("tech");
-    } else {
-        thirdDiv.classList.remove("tech");
-        secondDiv.classList.remove("tech");
-        firstDiv.className = "tech";
-    };
+firstDiv.addEventListener("click", firstReceberClick);
+
+ function firstReceberClick() {
+     if (firstDiv.classList == "tech") {
+         firstDiv.classList.remove("tech");
+     } else {
+         thirdDiv.classList.remove("tech");
+         secondDiv.classList.remove("tech");
+         firstDiv.className = "tech";
+     };
     
 
-};
+ };
 
-secondDiv.addEventListener("click", secondReceberClick);
+ secondDiv.addEventListener("click", secondReceberClick);
 
-function secondReceberClick() {
-    if (secondDiv.classList == "tech") {
-        secondDiv.classList.remove("tech");
-    } else {
-        thirdDiv.classList.remove("tech");
-        firstDiv.classList.remove("tech");
-        secondDiv.className = "tech";
-    };
+ function secondReceberClick() {
+     if (secondDiv.classList == "tech") {
+         secondDiv.classList.remove("tech");
+     } else {
+         thirdDiv.classList.remove("tech");
+         firstDiv.classList.remove("tech");
+         secondDiv.className = "tech";
+     };
 
-};
+ };
 
-thirdDiv.addEventListener("click", thirdReceberClick);
+ thirdDiv.addEventListener("click", thirdReceberClick);
 
-function thirdReceberClick() {
-    if (thirdDiv.classList == "tech") {
-        thirdDiv.classList.remove("tech");
-    } else {
-        firstDiv.classList.remove("tech");
-        secondDiv.classList.remove("tech");
-        thirdDiv.className = "tech";
-    };
-};
+ function thirdReceberClick() {
+     if (thirdDiv.classList == "tech") {
+         thirdDiv.classList.remove("tech");
+     } else {
+         firstDiv.classList.remove("tech");
+         secondDiv.classList.remove("tech");
+         thirdDiv.className = "tech";
+     };
+ };
 
 input.addEventListener("keyup", changeTech);
 function changeTech() {
