@@ -42,5 +42,16 @@ for (let i = 0; i < dezDaysList.length; i += 1) {
     liDays.className = "day";
   };
 };
+//Exercicio 2
+
+let buttonContainer = document.querySelector(".buttons-container");
+let buttonFriday = document.createElement("button");
+function createButtonFriday(string) {
+  buttonContainer.appendChild(buttonFriday);
+  buttonFriday.innerText = string;
+  buttonFriday.id = "btn-holiday";
+  console.log(buttonFriday.innerText);
+};
+
 
 
