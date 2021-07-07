@@ -129,3 +129,22 @@ function colorLegenda (string) {
 colorLegenda ("blue");
 
 //Exercicio 9 
+
+let tasks =  document.querySelector(".task");
+
+tasks.addEventListener ("click", taskSelect);
+
+function taskSelect (event) {
+  if (event.target.classList == "task selected") {
+    event.target.classList.remove("selected")
+    event.target.style.border = "";
+  } else {
+    event.target.classList.add("selected");
+    event.target.style.border = "thick solid green"
+  };
+  
+};
+
+
+
+
