@@ -149,11 +149,32 @@ function tasksSelect (event) {
 
  function dayTaskColor (event) {
   let taskSelect = document.querySelector(".selected");
-  if (event.target.style.backgroundColor == taskSelect.style.backgroundColor) {
-    event.target.style.backgroundColor = "rgb(238,238,238)"
+  if (event.target.style.color == taskSelect.style.backgroundColor) {
+    event.target.style.color = "rgb(119,119,119)"
   } else {
-    event.target.style.backgroundColor = taskSelect.style.backgroundColor;
+    event.target.style.color = taskSelect.style.backgroundColor;
  };
 };
 
+//Exercicio bonus
+let input = document.getElementById('task-input');
+let buttonAdd = document.getElementById('btn-add');
+let appointments = document.querySelector(".input-container h3");
+
+buttonAdd.addEventListener("click", addAppointments);
+
+function addAppointments () {
+  let appointmentsList = document.createElement("li");
+
+  if (input.value.length > 0) {
+    appointments.appendChild(appointmentsList);
+    appointmentsList.innerText= input.value;
+  } else {
+    alert("ERRO!!!");
+  };
+  
+
+
+
+};
 
