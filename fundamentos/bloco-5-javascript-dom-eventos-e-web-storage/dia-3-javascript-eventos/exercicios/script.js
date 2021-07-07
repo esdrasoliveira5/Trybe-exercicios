@@ -80,20 +80,14 @@ function createButtonFriday(string) {
 createButtonFriday("Sexta-Feira");
 
 //Exercicio 5;
-let buttonFridays = document.getElementById("btn-friday");
-let dayFriday = document.querySelectorAll(".friday");
+// let buttonFridays = document.getElementById("btn-friday");
+// let dayFriday = document.querySelectorAll(".friday");
+// let numberDay = [];
 
-buttonFridays.addEventListener("click", clickButtonFriday);
-function clickButtonFriday () {
-  
-  for (let i = 0; i < dayFriday.length; i += 1) {
-    if (dayFriday[i].style.backgroundColor === "green") {
-      dayFriday[i].style.backgroundColor = "rgb(238,238,238)";
-    } else {
-      dayFriday[i].style.backgroundColor = "green";
-    };
-  };
-};
+// buttonFridays.addEventListener("click", clickButtonFriday);
+
+
+
 
 //Exercicio 6 
 
@@ -124,3 +118,14 @@ creatTasks("cozinhar");
 
 //Exercicio 8
 
+let div = document.createElement("div");
+
+function colorLegenda (string) {
+  myTasks.appendChild(div);
+  div.className = "task";
+  div.style.backgroundColor = string;
+};
+
+colorLegenda ("blue");
+
+//Exercicio 9 
