@@ -1,11 +1,12 @@
-let angulo1 = -30;
-let angulo2 = 45;
-let angulo3 = 55;
-let soma = angulo1 + angulo2 + angulo3;
-if (soma === 180){
-    console.log("true");
-} else if ( angulo1 > 0 && angulo2 > 0 && angulo3 > 0 && soma !== 180) {
-    console.log("false");
-} else {
-    console.log("Erro");
+
+function triangle(angle1, angle2, angle3) {
+    let sum = angle1 + angle2 + angle3;
+    if (sum === 180){
+        return ("true");
+    } else if ( angle1 > 0 && angle2 > 0 && angle3 > 0 && sum !== 180) {
+        return ("false");
+    } else {
+        return ("Erro");
+    }
 }
+console.log(triangle(50, 40, -50));

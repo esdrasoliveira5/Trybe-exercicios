@@ -1,17 +1,26 @@
-let a = 10;
-let b = 5;
 
-let adicao = a + b;
-console.log(adicao);
+function addition(valueA, valueB) {
+    let result = valueA + valueB;
+    return result;
+}
 
-let subtracao = a - b;
-console.log(subtracao);
+function subtraction(valueA, valueB) {
+    let result = valueA - valueB;
+    return result;
+}
 
-let multiplicacao = a * b;
-console.log(multiplicacao);
+function multiplication(valueA, valueB) {
+    let result = valueA * valueB;
+    return result;
+}
 
-let divisao = a / b;
-console.log(divisao);
+function division(valueA, valueB) {
+    let result = valueA / valueB;
+    return result;
+}
 
-let modulo = a % b;
-console.log(modulo);
+function modulo(valueA, valueB) {
+    let result = valueA % valueB;
+    return result;
+}
+console.log(modulo(10, 20));

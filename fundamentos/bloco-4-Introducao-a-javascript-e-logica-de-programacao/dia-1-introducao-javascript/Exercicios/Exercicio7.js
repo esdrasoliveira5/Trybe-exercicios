@@ -1,18 +1,21 @@
-let nota = 110;
-if (nota >= 90 && nota < 100) {
-     nota = "A";
-} else if (nota >= 80 && nota < 100) {
-    nota = "B";
-} else if (nota >= 70 && nota < 100) {
-    nota = "C";
-} else if (nota >= 60 && nota < 100) {
-    nota = "D"
-} else if (nota >= 50 && nota < 100) {
-    nota = "E"; 
-} else if (nota < 50) {
-    nota = "F";
-} else {
-    nota = "Erro"
+function convertGrade(grade) {
+    if (grade >= 90 && grade < 100) {
+        grade = "A";
+   } else if (grade >= 80 && grade < 100) {
+       grade = "B";
+   } else if (grade >= 70 && grade < 100) {
+       grade = "C";
+   } else if (grade >= 60 && grade < 100) {
+       grade = "D"
+   } else if (grade >= 50 && grade < 100) {
+       grade = "E"; 
+   } else if (grade < 50) {
+       grade = "F";
+   } else {
+       grade = "Erro"
+   }
+   
+   return grade;
 }
 
-return console.log(nota);
+console.log(convertGrade(57));
