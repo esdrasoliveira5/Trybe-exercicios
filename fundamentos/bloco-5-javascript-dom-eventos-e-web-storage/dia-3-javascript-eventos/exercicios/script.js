@@ -79,4 +79,22 @@ function createButtonFriday(string) {
 
 createButtonFriday("Sexta-Feira");
 
-//
+//Exercicio 5;
+let buttonFridays = document.getElementById("btn-friday");
+let dayFriday = document.querySelectorAll(".friday");
+
+buttonFridays.addEventListener("click", clickButtonFriday);
+function clickButtonFriday () {
+  
+  for (let i = 0; i < dayFriday.length; i += 1) {
+    if (dayFriday[i].style.backgroundColor === "green") {
+      dayFriday[i].style.backgroundColor = "rgb(238,238,238)";
+    } else {
+      dayFriday[i].style.backgroundColor = "green";
+    };
+  };
+};
+
+
+
+
