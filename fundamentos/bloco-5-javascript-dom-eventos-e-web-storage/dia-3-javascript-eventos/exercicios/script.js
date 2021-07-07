@@ -132,9 +132,9 @@ colorLegenda ("blue");
 
 let tasks =  document.querySelector(".task");
 
-tasks.addEventListener ("click", taskSelect);
+tasks.addEventListener ("click", tasksSelect);
 
-function taskSelect (event) {
+function tasksSelect (event) {
   if (event.target.classList == "task selected") {
     event.target.classList.remove("selected")
     event.target.style.border = "";
@@ -142,9 +142,18 @@ function taskSelect (event) {
     event.target.classList.add("selected");
     event.target.style.border = "thick solid green"
   };
-  
 };
 
+//Exercicio 10
+ days.addEventListener("click", dayTaskColor);
 
+ function dayTaskColor (event) {
+  let taskSelect = document.querySelector(".selected");
+  if (event.target.style.backgroundColor == taskSelect.style.backgroundColor) {
+    event.target.style.backgroundColor = "rgb(238,238,238)"
+  } else {
+    event.target.style.backgroundColor = taskSelect.style.backgroundColor;
+ };
+};
 
 
