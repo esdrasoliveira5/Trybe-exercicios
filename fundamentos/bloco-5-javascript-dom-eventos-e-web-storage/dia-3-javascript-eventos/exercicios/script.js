@@ -50,7 +50,6 @@ function createButtonHoliday(string) {
   buttonContainer.appendChild(buttonHoliday);
   buttonHoliday.innerText = string;
   buttonHoliday.id = "btn-holiday";
-  console.log(buttonHoliday.innerText);
 };
 
 createButtonHoliday("Feriados")
@@ -70,5 +69,14 @@ function clickButtonHoliday () {
   };
 };
 
+//Exercicio 4
+let buttonFriday = document.createElement("button");
+function createButtonFriday(string) {
+  buttonContainer.appendChild(buttonFriday);
+  buttonFriday.innerText = string;
+  buttonFriday.id = "btn-friday";
+};
 
+createButtonFriday("Sexta-Feira");
 
+//
