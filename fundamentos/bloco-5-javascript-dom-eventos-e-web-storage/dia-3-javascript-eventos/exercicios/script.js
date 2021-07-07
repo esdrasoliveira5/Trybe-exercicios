@@ -45,12 +45,29 @@ for (let i = 0; i < dezDaysList.length; i += 1) {
 //Exercicio 2
 
 let buttonContainer = document.querySelector(".buttons-container");
-let buttonFriday = document.createElement("button");
-function createButtonFriday(string) {
-  buttonContainer.appendChild(buttonFriday);
-  buttonFriday.innerText = string;
-  buttonFriday.id = "btn-holiday";
-  console.log(buttonFriday.innerText);
+let buttonHoliday = document.createElement("button");
+function createButtonHoliday(string) {
+  buttonContainer.appendChild(buttonHoliday);
+  buttonHoliday.innerText = string;
+  buttonHoliday.id = "btn-holiday";
+  console.log(buttonHoliday.innerText);
+};
+
+createButtonHoliday("Feriados")
+//Exercicio 3
+let buttonHolidays = document.getElementById("btn-holiday");
+let dayHoliday = document.querySelectorAll(".holiday");
+
+buttonHolidays.addEventListener("click", clickButtonHoliday);
+function clickButtonHoliday () {
+  
+  for (let i = 0; i < dayHoliday.length; i += 1) {
+    if (dayHoliday[i].style.backgroundColor === "green") {
+      dayHoliday[i].style.backgroundColor = "rgb(238,238,238)";
+    } else {
+      dayHoliday[i].style.backgroundColor = "green";
+    };
+  };
 };
 
 
