@@ -95,6 +95,21 @@ function clickButtonFriday () {
   };
 };
 
+//Exercicio 6 
+
+
+days.addEventListener("mouseover", mouseZoom);
+
+function mouseZoom(event) {
+  event.target.style.fontSize = "30px";
+};
+
+days.addEventListener("mouseout", mouseZoomOut);
+
+function mouseZoomOut(event) {
+ event.target.style.fontSize = "20px"
+}
+
 
 
 
