@@ -110,6 +110,17 @@ function mouseZoomOut(event) {
  event.target.style.fontSize = "20px"
 }
 
+//Exercicio 7 
 
+let myTasks = document.querySelector(".my-tasks");
+let task = document.createElement("span");
 
+function creatTasks(string) {
+  myTasks.appendChild(task);
+  task.innerText = string;
+}
+
+creatTasks("cozinhar");
+
+//Exercicio 8
 
