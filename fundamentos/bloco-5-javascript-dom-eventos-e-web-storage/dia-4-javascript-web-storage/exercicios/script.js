@@ -19,9 +19,26 @@ window.onload = function() {
     let fontSize = document.querySelector("#fontSize");
     fontSize.addEventListener("change", changeFontSize);
     function changeFontSize () {
-       let p = document.querySelector("p");
+       let p = document.body;
        p.style.fontSize = fontSize.value + "px";
        localStorage.setItem("fontSize", fontSize.value + "px");
+    };
+
+
+    let lineHeight = document.querySelector("#line-height");
+    lineHeight.addEventListener("change", changeLineHeight);
+    function changeLineHeight () {
+        let p = document.body;
+        p.style.lineHeight = lineHeight.value + "px";
+        localStorage.setItem("line-height", lineHeight.value + "px");
+    };
+
+    let fontFamily = document.querySelector("#font-family");
+    fontFamily.addEventListener("change", changeFontFamily);
+    function changeFontFamily () {
+        let body = document.body;
+        body.style.fontFamily = fontFamily.value;
+        localStorage.setItem("font-family", fontFamily.value);
     };
 
     let savedBackgroundColor = localStorage.getItem("backgroundColor");
@@ -31,11 +48,13 @@ window.onload = function() {
     document.body.style.color = savedFontColor;
 
     let savedFontSize = localStorage.getItem("fontSize");
-    document.querySelector("p").style.fontSize = savedFontSize;
+    document.body.style.fontSize = savedFontSize;
 
+    let savedLineHeight = localStorage.getItem("line-height");
+    document.body.style.lineHeight = savedLineHeight;
 
-
-
+    let savedFontFamily = localStorage.getItem("font-family");
+    document.body.style.fontFamily = savedFontFamily;
 };
 
 
