@@ -14,6 +14,14 @@ window.onload = function() {
     };
 
 
+    let fontSize = document.querySelector("#fontSize");
+    fontSize.addEventListener("change", changeFontSize);
+    function changeFontSize () {
+       let p = document.querySelector("p");
+       p.style.fontSize = fontSize.value + "px";
+    };
+
+
 };
 
 
