@@ -7,7 +7,7 @@
 // Imprimir o triangulo na variavel b
 
 
-let n = 10;
+let n = 5;
 let a = "*";
 let b = "";
 for (let i = 0; i < n; i += 1) {
