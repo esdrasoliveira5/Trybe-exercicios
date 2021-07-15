@@ -23,7 +23,6 @@ dataInput.addEventListener('change', dataFormat)
 
 function nameValidation() {
   const nameImput = document.querySelector('#name-input')
-  console.log(nameImput.value);
   if (nameImput.value.length <= 1) {
     console.log('Erro NOme');
   };
@@ -37,12 +36,66 @@ function emailValidation() {
   };
 };
 
+function cpfValidation() {
+  const cpfInput = document.querySelector('#cpf-input')
+  if (cpfInput.value.length <= 1) {
+    console.log('Erro CPF');
+  };
+}
+
+function cpfValidation() {
+  const adressInput = document.querySelector('#endereco-input')
+  if (adressInput.value.length <= 1) {
+    console.log('Erro Endereco');
+  };
+}
+
+function cityValidation() {
+  const cityInput = document.querySelector('#cidade-input')
+  if (cityInput.value.length <= 1) {
+    console.log('Erro Cidade');
+  };
+}
+
+function cityValidation() {
+  const cityInput = document.querySelector('#cidade-input')
+  if (cityInput.value.length <= 1) {
+    console.log('Erro Cidade');
+  };
+}
+
+function experienceValidation() {
+  const experienceInput = document.querySelector('#textarea')
+  if (experienceInput.value.length <= 1) {
+    console.log('Erro Resumo de Experiencia');
+  };
+}
+
+function cargoValidation() {
+  const cargoInput = document.querySelector('#cargo-input')
+  if (cargoInput.value.length <= 1) {
+    console.log('Erro cargo');
+  };
+}
+
+function descricaoValidation() {
+  const descricaoInput = document.querySelector('#descricao-input')
+  if (descricaoInput.value.length <= 1) {
+    console.log('Erro Descricao do Cargo');
+  };
+}
 
 function submit(event) {
   event.preventDefault()
   dataFormat();
   nameValidation();
   emailValidation();
+  cpfValidation();
+  cpfValidation();
+  cityValidation();
+  experienceValidation();
+  cargoValidation();
+  descricaoValidation();
 }
 
 const buttonSubmit = document.querySelector('#buttonSubmit');
