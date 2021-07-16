@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link href="node_modules/popup-validation/bin/validation.min.css" rel="stylesheet">
+  <script src="node_modules/popup-validation/bin/validation.min.js"></script> 
+  <title>Formulario</title>
+</head>
+<body>
+  <header class="section">
+    <div class="container">
+      <h1 class="title is-2">Formulario de Inscricao</h1>
+    </div>
+  </header>
+  <form action="" method="get" id="client">
+    <fieldset class="section">
+      <div class="container">
+        <h2 class="subtitle is-4">Dados Pessoais</h2>
+        <div class="field">
+          <label class="label" for="name-input">Nome</label>
+          <div class="control">
+            <input class="input validate" type="text" data-validate="required" maxlength="40">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="email-input">Email</label>
+          <div class="control">
+            <input class="input validate" type="email" data-validate="required,email" >
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="cpf-input">CPF</label>
+          <div class="control">
+            <input class="input validate" type="text" data-validate="required" maxlength="11">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="endereco-input">Endereco</label>
+          <div class="control">
+            <input class="input validate" data-validate="required" type="text" required maxlength="200">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="cidade-input">Cidade</label>
+          <div class="control">
+            <input class="input validate" type="text" data-validate="required" required maxlength="28">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="estado-input">Estado</label>
+          <div class="control">
+            <div class="select" >
+              <select name="estados" id="estados-input"></select>
+            </div>
+          </div>
+        <div class="field">
+            <div class="control">
+              <label class="radio" for="casa">
+                <input type="radio" name="casa" id="casa" checked>Casa
+              </label>
+              <label class="radio" for="apartamento">
+                <input type="radio" name="casa" id="apartamento" >Apartamento
+              </label>
+            </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="section">
+      <div class="container">
+        <h2 class="subtitle is-4">Resumo de experiencia</h2>
+        <div class="field">
+          <label class="label" for="">Resumo</label>
+          <div class="control">
+            <textarea class="textarea validate" name="resumo" cols="30" rows="10" placeholder="Escreva um resumo do seu curriculo" maxlength="1000" data-validate="required">
+            </textarea>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="cargo-input">Cargo</label>
+          <div class="control">
+            <input class="input validate" type="text"  data-validate="required" maxlength="40">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="descricao-input">Descricao do Cargo</label>
+          <div class="control">
+            <input class="input validate" type="text" data-validate="required" maxlength="500">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="">Data de Inicio</label>
+          <div class="control">
+            <input class="input validate" type="text" id="datepicker" data-validate="required" placeholder="dd/mm/aaaa" maxlength="10"> 
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="button" type="submit" id="buttonSubmit">Enviar</button>
+          <input class="button" id="resetButton" type="reset" value="Reset input">
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <script src="pikaday.js"></script>
+  <script>
+    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
