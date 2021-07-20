@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+
+
+}
+
+header {
+  padding-left: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  border: solid black 1px;
+  background-color:darkgrey;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  border: solid black 1px;
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 20px;
+  
+}
+
+
+footer {
+  font-size: 14px;
+  padding: 10px;
+  border: solid black 1px;
+}
+
+.main-content h1 {
+  font-size: 30px;
+}
+
+.main-content p {
+  font-size: 20px;
+}
