@@ -97,7 +97,66 @@
     float: none;
     display: block;
   }
+
 }
 
+@media screen and (max-width: 240px) {
+  #aside {
+    display: none;
+  }
 
+  body {
+    padding: auto;
+  }
 
+  img {
+    width: 240px;
+  }
+  #navigation ul {
+    display: block;
+  }
+
+  #header {
+    position: fixed;
+    width: 100%;
+  }
+
+  #navigation {
+    margin-top: 80px;
+  }
+
+  #navigation li a {
+    float: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #aside {
+    display: none;
+  }
+
+  body {
+    padding: none;
+  }
+
+  img {
+    width: 360px;
+  }
+
+  #navigation {
+    display: block;
+  }
+
+  #header {
+    position: fixed;
+    width: 100%;
+  }
+
+  #navigation {
+    margin-top: 80px;
+  }
+
+  #navigation li a {
+    float: none;
+  }
+}
