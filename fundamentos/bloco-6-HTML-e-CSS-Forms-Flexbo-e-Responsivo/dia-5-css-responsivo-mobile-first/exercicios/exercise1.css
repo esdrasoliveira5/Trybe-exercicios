@@ -1,0 +1,42 @@
+body {
+    font-size: 20px;
+    margin: 10px;
+}
+h1 {
+    font-size: 30px;
+}
+h2 {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+    padding: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        background-color: blueviolet;
+        font-size: 18px;
+        margin: 20px;
+    }
+    
+    .figures {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        background-color: crimson;
+        font-size: 17px;
+        margin: 50px;
+        max-width: 1400px;
+    }
+}
+
