@@ -6,9 +6,12 @@ const fetchJoke = () => {
     method: 'GET',
     headers: { 'Accept': 'application/json' }
   };
-
+  let h1 = document.getElementById('jokeContainer');
   fetch(API_URL, myObject)
-  .then(response => console.log(response));
+  .then(response => response.json())
+  .then(data => h1.innerText = data.joke);
+  
+
 };
 
 window.onload = () => fetchJoke();
