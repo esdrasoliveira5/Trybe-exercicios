@@ -1,4 +1,4 @@
-const { sum,  myRemove, myRemoveWithoutCopy } = require("../src/Part1");
+const { sum,  myRemove, myRemoveWithoutCopy, myFizzBuzz } = require("../src/Part1");
 
 describe('Function Sum', () => {
   it('sum is a function', () => {
@@ -19,8 +19,8 @@ describe('Function Sum', () => {
 
   it('4 + "5" e igual a mensagem de erro', () => {
     expect(() => sum(4, '5')).toThrow('parameters must be numbers');
-  })
-})
+  });
+});
 
 describe('Function myRemove', () => {
   it('myRemove', () => {
@@ -47,7 +47,7 @@ describe('Function myRemove', () => {
     const array = [1, 2, 3, 4];
     expect(myRemove(array, 5)).toStrictEqual([1, 2, 3, 4]);
   });
-})
+});
 
 describe('Function myRemoveWithoutCopy', () => {
   it('Verifica se myRemoveWithoutCopy e uma funcao', () => {
@@ -70,5 +70,31 @@ describe('Function myRemoveWithoutCopy', () => {
 
   it('Verifica se a chamda myRemoveWithoutCopy([1, 2, 3, 4], 5) retorna o array esperado', () => {
     expect(myRemoveWithoutCopy([1, 2, 3, 4], 5)).toStrictEqual(([1, 2, 3, 4]));
+  });
+});
+
+describe('Function myFizzBuzz', () => {
+  it('Verifica se myFizzBuzz e uma funcao', () => {
+    expect(typeof myFizzBuzz).toBe('function');
+  });
+
+  it('Verifica se myFizzBuzz(15) retorna "fizzbuzz"', () => {
+    expect(myFizzBuzz(15)).toBe('fizzbuzz');
+  });
+
+  it('Verifica se myFizzBuzz(6) retorna "fizz"', () => {
+    expect(myFizzBuzz(6)).toBe('fizz');
+  });
+
+  it('Verifica se myFizzBuzz(10) retorna "buzz"', () => {
+    expect(myFizzBuzz(10)).toBe('buzz');
+  });
+
+  it('Verifica se myFizzBuzz(2) retorna 2', () => {
+    expect(myFizzBuzz(2)).toBe(2);
+  });
+
+  it('Verifica se myFizzBuzz("Aba") retorna false', () => {
+    expect(myFizzBuzz('ABA')).toBe(false);
   });
 })
