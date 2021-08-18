@@ -46,8 +46,24 @@ function techList(array, nome) {
   return c;
 }
 
+function hydrate(string) {
+  const number = string.split('').reduce((total, character) => {
+    let parsedCharacter = parseInt(character);
+    if (isNaN(parsedCharacter) === false) {
+      return total + parsedCharacter;
+    };
+    return total;
+  }, 0);
+
+  if( number > 1) {
+    return `${number} copos de água`;
+  };
+  return `${number} copo de água`;
+}
+
 module.exports = {
   encode,
   decode,
   techList,
+  hydrate,
 }
