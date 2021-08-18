@@ -38,8 +38,16 @@ function decode(string) {
   return b;
 }
 
+function techList(array, nome) {
+  if(array.length === 0) {
+    return 'Vazio!'
+  }
+  const c = array.sort().map((techs) => ({ tech: techs, name: nome}));
+  return c;
+}
 
 module.exports = {
   encode,
   decode,
+  techList,
 }
