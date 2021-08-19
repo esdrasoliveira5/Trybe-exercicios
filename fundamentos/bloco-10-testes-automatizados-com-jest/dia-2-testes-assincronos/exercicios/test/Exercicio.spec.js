@@ -1,6 +1,6 @@
 /* eslint-disable max-lines-per-function */
 /* eslint-disable max-len */
-const { uppercase, getUserName } = require('../src/Exercicios');
+const { uppercase, getUserName, getRepos } = require('../src/Exercicios');
 
 describe('Exercise 1 test', () => {
   it('Function uppercase is defined', () => {
@@ -41,6 +41,16 @@ describe('Exercise 2 test', () => {
       } catch (error) {
         expect(error).toEqual(new Error('User with 4 not found.'));
       }
+    });
+  });
+});
+
+describe('Exercise 4 test', () => {
+  describe('if Project exist', () => {
+    it('return repository Name', async () => {
+      const url = 'https://api.github.com/orgs/tryber/repos';
+     expect(await getRepos(url)).toContain('sd-01-week4-5-project-todo-list');
+     await expect(getRepos(url)).resolves.toContain('sd-01-week4-5-project-meme-generator');
     });
   });
 });

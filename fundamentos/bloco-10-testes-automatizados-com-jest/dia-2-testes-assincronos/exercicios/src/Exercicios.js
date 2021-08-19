@@ -21,7 +21,14 @@ const findUserById = (id) => new Promise((resolve, reject) => {
 
 const getUserName = (userId) => findUserById(userId).then((user) => user.name);
 
+const fetch = require('node-fetch');
+
+const getRepos = (url) => fetch(url)
+    .then((response) => response.json())
+    .then((data) => data.map((repo) => repo.name));
+
 module.exports = {
   uppercase,
   getUserName,
+  getRepos,
 };
