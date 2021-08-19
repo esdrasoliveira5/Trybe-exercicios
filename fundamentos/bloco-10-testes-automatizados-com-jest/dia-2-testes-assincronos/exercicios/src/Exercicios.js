@@ -1,3 +1,9 @@
+const fetch = require('node-fetch');
+
+const getRepos = (url) => fetch(url)
+    .then((response) => response.json())
+    .then((data) => data.map((repo) => repo.name));
+
 const uppercase = (str, callback) => {
   setTimeout(() => {
     callback(str.toUpperCase());
@@ -21,14 +27,24 @@ const findUserById = (id) => new Promise((resolve, reject) => {
 
 const getUserName = (userId) => findUserById(userId).then((user) => user.name);
 
-const fetch = require('node-fetch');
+const Animals = [
+  { name: 'Dorminhoco', age: 1, type: 'Dog' },
+  { name: 'Soneca', age: 2, type: 'Dog' },
+  { name: 'Preguiça', age: 5, type: 'Cat' },
+];
 
-const getRepos = (url) => fetch(url)
-    .then((response) => response.json())
-    .then((data) => data.map((repo) => repo.name));
+const findAnimalByName = (name) => (
+  // Adicione o código aqui.
+);
+
+const getAnimal = (name) => {
+  // Adicione o código aqui.
+};
+// ---------------------
 
 module.exports = {
   uppercase,
   getUserName,
   getRepos,
+  getAnimal,
 };

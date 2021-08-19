@@ -1,6 +1,6 @@
 /* eslint-disable max-lines-per-function */
 /* eslint-disable max-len */
-const { uppercase, getUserName, getRepos } = require('../src/Exercicios');
+const { uppercase, getUserName, getRepos, getAnimal } = require('../src/Exercicios');
 
 describe('Exercise 1 test', () => {
   it('Function uppercase is defined', () => {
@@ -65,4 +65,24 @@ describe('Scoped / Nested block', () => {
   afterEach(() => console.log('2 - afterEach'));
 
   test('', () => console.log('2 - test'));
+});
+
+describe('Testando promise - findAnimalByName', () => {
+  describe('Quando existe o animal com o nome procurado', () => {
+    test('Retorne o objeto do animal', () => {
+      expect.assertions(1);
+      return getAnimal('Dorminhoco').then((animal) => {
+        expect(animal).toEqual({ name: 'Dorminhoco', age: 1, type: 'Dog' });
+      });
+    });
+  });
+
+  describe('Quando não existe o animal com o nome procurado', () => {
+    test('Retorna um erro', () => {
+      expect.assertions(1);
+      return getAnimal('Bob').catch((error) =>
+        expect(error).toEqual('Nenhum animal com esse nome!')
+      );
+    });
+  });
 });
