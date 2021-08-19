@@ -24,6 +24,7 @@ describe('Exercise 2 test', () => {
     expect(typeof getUserName).toBe('function');
   });
 
+  // async and resolve
   describe('if the id exist', () => {
     it('return the user name', async () => {
       expect.assertions(1);
@@ -31,10 +32,15 @@ describe('Exercise 2 test', () => {
     });
   });
 
+  // so async pra capturar erro
   describe('if the id not exist', () => {
     it('return an error', async () => {
       expect.assertions(1);
-      await expect(getUserName(4)).rejects.toEqual(new Error('User with 4 not found.'));
+      try {
+        await getUserName(4);
+      } catch (error) {
+        expect(error).toEqual(new Error('User with 4 not found.'));
+      }
     });
   });
 });
