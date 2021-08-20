@@ -14,5 +14,7 @@
     "eslint-config-trybe-fundamentals": "^1.1.1",
     "jest": "^27.0.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
 }

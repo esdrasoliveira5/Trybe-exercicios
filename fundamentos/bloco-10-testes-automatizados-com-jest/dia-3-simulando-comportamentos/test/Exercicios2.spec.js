@@ -11,6 +11,12 @@ describe('Function uppercaseString', () => {
     expect(strings.uppercaseString).toHaveBeenCalledTimes(1);
     expect(strings.uppercaseString).toHaveBeenCalledWith('ABACATE');
   });
+
+  it('should return string to UpperCase', () => {
+    const first = jest.spyOn(strings, 'uppercaseString');
+
+    expect(first('abacate')).toBe('ABACATE');
+  });
 });
 
 describe('Function firstLetter', () => {
