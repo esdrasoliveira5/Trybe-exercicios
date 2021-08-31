@@ -1,0 +1,9 @@
+.pokedex {
+  background-color: aquamarine;
+  border: solid black 1px;
+  display: flex;
+}
+.pokemon {
+  border: solid black 1px;
+
+}
