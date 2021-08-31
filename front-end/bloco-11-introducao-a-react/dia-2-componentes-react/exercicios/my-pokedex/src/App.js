@@ -4,9 +4,10 @@ import Pokedex from './componentes/Pokedex';
 
 function App() {
   return (
-    <div>
+    <main className="main">
+      <h1>POKEDEX</h1>
       <Pokedex pokes ={pokemons}/>
-    </div>
+    </main>
   );
 }
 
