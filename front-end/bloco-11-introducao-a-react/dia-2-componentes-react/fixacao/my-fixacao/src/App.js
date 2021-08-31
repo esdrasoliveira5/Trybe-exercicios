@@ -28,6 +28,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1> Orders recently created </h1>
+
+        
         < Order user={headphone.user} product={headphone.product} price={headphone.price} />
         < Order user={energyDrink.user} product={energyDrink.product} price={energyDrink.price} />
       </div>
