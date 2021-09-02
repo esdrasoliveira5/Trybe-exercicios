@@ -8,22 +8,32 @@ class App extends React.Component {
     super()
     this.logPress1 = this.logPress1.bind(this)
     this.state = {
-      numeroDeCliques: 0
+      numeroDeCliques: 0,
+      backgroundColor: ''
     }
   }
 
   logPress1(string) {
     console.log('PRESS11');
-    this.setState((s,_p) => ({
-      numeroDeCliques: s.numeroDeCliques + 1
+    this.setState((estadoAnterior,_p) => ({
+      numeroDeCliques: estadoAnterior.numeroDeCliques + 1
     }))
-    console.log(string + this.state.numeroDeCliques);
+    if(this.state.numeroDeCliques % 2 === 0) {
+      this.setState((s, _p) => ({
+        backgroundColor: s.backgroundColor = 'green'
+      }))
+    } else {
+      this.setState((s, _p) => ({
+        backgroundColor: s.backgroundColor = ''
+      }))
+    }
+    console.log(this.state.backgroundColor);
   }
 
   render() {
     return (
       <div>
-        <button onClick={()=> this.logPress1('LaMERDA')}>Botao Cliques: {this.state.numeroDeCliques}</button>
+        <button style={{ backgroundColor: this.state.backgroundColor}} onClick={()=> this.logPress1('LaMERDA')}>Botao Cliques: {this.state.numeroDeCliques}</button>
       </div>
     );
   }
