@@ -1,24 +1,24 @@
 import './App.css';
 import React from 'react';
 
-function logPress1() {
-  console.log('PRESS11');
-}
 
-function logPress2() {
-  console.log('PRESS22');
-}
-function logPress3() {
-  console.log('PRESS33');
-}
 
 class App extends React.Component {
+  constructor() {
+    super()
+    this.logPress1 = this.logPress1.bind(this)
+  }
+
+
+  logPress1() {
+    console.log('PRESS11');
+    console.log(this);
+  }
+
   render() {
     return (
       <div>
-        <button onClick={logPress1}>Button1</button>
-        <button onClick={logPress2}>Button2</button>
-        <button onClick={logPress3}>Button3</button>
+        <button onClick={this.logPress1}>Button1</button>
       </div>
     );
   }
