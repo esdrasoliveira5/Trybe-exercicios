@@ -7,7 +7,7 @@ const validCep = /\d{5}-?\d{3}/;
 const findByCep = async (req, resp) => {
   const { cep } = req.params;
   
-  if (cep !== validCep) {
+  if (cep === validCep) {
     return resp.status(400).json({ "error": { "code": "invalidData", "message": "CEP inválido" } });
   }
 
@@ -40,7 +40,8 @@ const createCep = async (req, resp) => {
   }
 
   const findCep = await CepServices.getCep(cep);
-
+  console.log(cep);
+  console.log(findCep);
   if (findCep.length === 1) {
     return resp.status(409).json({ "code": "alreadyExists", "message": "CEP já existente" })
   }
@@ -51,7 +52,7 @@ const createCep = async (req, resp) => {
     localidade,
     uf
   };
-
+  console.log(cepObj);
   await CepServices.createCep(cepObj);
 
   return resp.status(201).json(cepObj);

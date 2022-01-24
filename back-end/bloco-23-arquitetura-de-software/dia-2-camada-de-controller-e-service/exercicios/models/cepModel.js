@@ -9,10 +9,11 @@ const getByCep = async (cep) => {
 };
 
 const createCep = async (endereco) => {
+  console.log(endereco);
   const { cep, logradouro, bairro, localidade, uf } = endereco;
 
   const query = 'INSERT INTO cep_lookup.ceps (cep, logradouro, bairro, localidade, uf ) VALUES (?,?,?,?,?)';
-  await connection.execute(query, [20100, logradouro, bairro, localidade, uf]); 
+  await connection.execute(query, [cep, logradouro, bairro, localidade, uf]); 
 
 }
 

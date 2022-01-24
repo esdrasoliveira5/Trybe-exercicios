@@ -21,17 +21,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Ouvindo a porta ${PORT}`);
 });
-
-
-// const Joi = require('joi');
-// const { error } = Joi.object({
-//   cep: Joi.string().not().empty().required(),
-//   logradouro: Joi.string().not().empty().required(),
-//   bairro: Joi.string().not().empty().required(),
-//   localidade: Joi.string().not().empty().required(),
-//   uf: Joi.string().not().empty().required(),
-// }).validate(endereco);
-
-// if(error) {
-//   return 
-// }
